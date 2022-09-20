@@ -1,6 +1,8 @@
+from email import message
 from random import random
-from flask import Flask, render_template, jsonify, request
 from urllib import response
+from flask import Flask, render_template, jsonify, request
+import json
 from chatbot.chat import get_response
 
 
@@ -15,17 +17,17 @@ def home():
 @app.route('/chatbot', methods=["GET", "POST"])
 def get_bot_response():
     if request.method == "POST":
-
-            message = request.args.get('msg')
-            response = ""
-            if message:
-                response = get_response(message)
-                return str(response)
         
+        user_data = request.json
+        message = user_data['msg']
 
+        response = ""
 
-            else:
-                return "I do not understand. Please try again."
+        if message:
+            response = get_response(message)
+            return jsonify(msg=str(response))
+        else:
+            return "I do not understand. Please try again."
 
 
 if __name__=="__main__":
