@@ -25,9 +25,11 @@ import nltk
 
 nltk.download('punkt')
 
+exit()
+
 Modify intents.json with different intents and responses for your Chatbot
 
 Run:
 $ train.py
 
-$ app.py
+$ flask_app.py
