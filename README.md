@@ -2,8 +2,8 @@
 
 This repo currently contains the starter files.
 
-Clone repo:
-$ git clone https://github.com/python-engineer/foodie_chatbot.git
+
+Clone repo: $ git clone https://github.com/python-engineer/foodie_chatbot.git
 
 
 Create a virtual environment:
@@ -15,28 +15,21 @@ $ source venv/scripts/activate
 
 Install packages:
 
-$ pip install flask
-
-$ pip install torch
-
-$ pip install torchvision
-
-$ pip install nltk
+$ pip install flask torch torchvision nltk
 
 $ (venv) python
 
->>> import nltk
+>>>import nltk
 
->>> nltk.download('punkt')
+>>>nltk.download('punkt')
 
->>> exit()
+>>>exit()
 
 
 Modify intents.json with different intents and responses for your Chatbot.
-
 
 Run:
 
 $ train.py
 
-$ flask_app.py
+$ app.py
