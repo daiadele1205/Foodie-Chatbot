@@ -15,7 +15,7 @@ $ source venv/scripts/activate
 
 Install packages:
 
-$ pip install flask torch torchvision nltk
+$ pip install flask torch torchvision nltk numpy
 
 $ (venv) python
 
